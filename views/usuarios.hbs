@@ -1,0 +1,38 @@
+<div class="container-fluid">
+    <div class="container">
+        <h2>{{title}}</h2>
+        <hr>
+        <div class="row">
+            {{#each users}}
+                    {{#if activo}}
+                    <div class="col-4 p-2 mb-2">
+                    {{else}}
+                    <div class="col-4 p-2 mb-2 userInactivo">
+                    {{/if}}
+                    <div class="card p-2 mb-2">
+                        {{#if genero}}
+                        <img src="/images/user1.png" class="card-img-top" alt="{{nombre}}">
+                        {{else}}
+                        <img src="/images/user2.png" alt="{{nombre}}">
+                        {{/if}}
+                        <p class="m-0">{{#each nombre}} <strong>{{this}}</strong> {{/each}}</p>
+                        <p class="m-0">Edad: {{year-anioNac}}</p>
+                        <p class="m-0">{{localidad}}</p>
+                        <p class="m-0">{{profesion}}</p>
+                        {{#if activo}}
+                            <p class="badge bg-success">Activo</p>
+                        {{else}}
+                            <p class="badge bg-danger">Baja</p>
+                        {{/if}}
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+    <div>
+        <span>Array automatico</span> <br>
+        {{#each animales}}
+            <p>{{this}}</p>
+        {{/each}}
+    </div>
+</div>

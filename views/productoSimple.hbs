@@ -1,0 +1,82 @@
+<div class="container-fluid">
+    <div class="container mt-5">
+                <div class="breadcrumb">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb  ">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page">
+                <a class="text-dark" href="/">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a class="text-dark" href="/productos">Productos</a>
+            </li>
+            <li class="breadcrumb-item">
+                {{prodSingle.categoria}}
+            </li>
+        </ol>
+    </nav>
+        </div>
+
+    </div>
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-6">
+                {{#if prodSingle.imagen}}
+                    <img class="img-fluid w-100"  src="{{prodSingle.imagen}}" class="card-img" alt="{{nombre}}">
+                {{else}}
+                    <img class="img-fluid w-100"  src="/images/default.png" class="card-img" alt="{{nombre}}">
+                {{/if}}
+            </div>
+            <div class="col-6">
+                <h3>
+                {{prodSingle.nombre}}
+                </h3>
+                <p>
+                {{prodSingle.descripcion}}
+                </p>
+                <img src="https://d3ugyf2ht6aenh.cloudfront.net/stores/001/264/961/themes/new_linkedman/img-1985223656-1616610759-1c7f878c2067135ad28e22911136d1031616610759.jpg" class="img-fluid" alt="">
+                <div class="row">
+                    <div class="col-6 fs-1 mb-2 fw-bold">
+                        $ {{prodSingle.precio}}.-
+                    </div>
+                    <div class="col-6 mt-3">
+                    <!-- AddToAny BEGIN -->
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_whatsapp"></a>
+<a class="a2a_button_telegram"></a>
+</div>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END --></div>
+                    <div class="col-6">
+                        {{#if prodSingle.stock}}
+                            <span class="btn btn-primary mt-2 fs-3">cantidad: {{prodSingle.stock}}</span>
+                            <a href="/contacto" class="btn btn-primary mt-2 fs-3">Comprar</a>
+                        {{else}}
+                            <a href="" class="btn btn-danger">Sin stock</a>
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container-fluid">
+              <div class="container">
+            <p><div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v11.0&appId=294415918122776&autoLogAppEvents=1" nonce="REpWH5iu"></script><div class="fb-comments" data-href="http://localhost:3000/" data-width="100%" data-numposts="5"></div>
+
+           </p>
+           </div>
+        </div>
+            <div class="alert alert-success">
+                {{legales}}
+            </div>
+            <div class="text-center m-2">
+               <img src="https://recargasonline.yolasite.com/resources/banner_home_mercadopago.jpg" class="img-fluid" alt="">
+            </div>
+    </div>
+</div>
+
+
+
+

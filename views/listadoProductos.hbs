@@ -1,0 +1,46 @@
+
+<div class="container-fluid mt-5">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-9">
+                <h1>{{title}}</h1>
+            </div>
+            <div class="col-3 text-end">
+               
+            </div>
+        </div>
+        <hr>
+
+        <div class="row">
+        {{#each productos}}
+            <div class="col-5 m-2">
+               
+<div class="card h-100 ">
+   {{#if imagen}}
+                            <img  src="{{imagen}}" class="card-img" width="200px" heigth="250px" alt="{{nombre}}">
+                        {{else}}
+                            <img  src="/images/default.png" class="card-img" alt="{{nombre}}">
+                        {{/if}}
+  <div class="card-body">
+    <h5 class="card-title">{{nombre}}</h5>
+    <p class="card-text"></p>
+    <a href="/productos/{{id}}" class="btn btn-dark">Mas Info</a>
+     
+  </div>
+</div>
+
+</div >
+
+        {{/each}}
+    </div>
+   
+
+ <!-- Call to Action-->
+            <div class="card text-white bg-secondary my-5 py-4 text-center">
+                <div class="card-body"><h4 class="text-white m-0">La tienda Numero 1° en venta de Biciletas! Bicimania Rosario</h4></div>
+            </div>
+
+
+
+   
